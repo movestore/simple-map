@@ -2,14 +2,14 @@ library('move')
 library('shiny')
 library('maps')
 
-shinyModuleUserInterface <- function(id, label,num=2) {
+shinyModuleUserInterface <- function(id, label,num=0) {
   ns <- NS(id)
   
   tagList(
     titlePanel("Simple map"),
     sliderInput(inputId = ns("num"), 
                 label = "Choose a margin size", 
-                value = num, min = 1, max = 30),
+                value = num, min = 0, max = 30),
     plotOutput(ns("map"))
   )
 }

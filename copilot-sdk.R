@@ -23,7 +23,7 @@ if(file.exists("configuration.json")) {
 
 # Add your arguments of your r function here
 
-args[["num"]] <- 2
+args[["num"]] <- 0
 
 #################################################################
 #################################################################
