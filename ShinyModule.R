@@ -10,7 +10,7 @@ shinyModuleUserInterface <- function(id, label,num=0) {
     sliderInput(inputId = ns("num"), 
                 label = "Choose a margin size", 
                 value = num, min = 0, max = 30),
-    plotOutput(ns("map"))
+    plotOutput(ns("map"),height="90vh")
   )
 }
 
