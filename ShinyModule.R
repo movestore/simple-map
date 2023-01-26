@@ -2,26 +2,19 @@ library('move')
 library('shiny')
 library('maps')
 
-shinyModuleUserInterface <- function(id, label,num=0) {
+shinyModuleUserInterface <- function(id, label) {
   ns <- NS(id)
   
   tagList(
     titlePanel("Simple map"),
     sliderInput(inputId = ns("num"), 
-                label = "Choose a margin size", 
-                value = num, min = 0, max = 30),
+                label = "Choose edge size", 
+                value = 2, min = 0, max = 30),
     plotOutput(ns("map"),height="90vh")
   )
 }
 
-shinyModuleConfiguration <- function(id, input) {
-  ns <- NS(id)
-  configuration <- list()
-
-  configuration
-}
-
-shinyModule <- function(input, output, session, data,num=2) {
+shinyModule <- function(input, output, session, data) {
   dataObj <- reactive({ data })
   current <- reactiveVal(data)
 
