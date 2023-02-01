@@ -1,13 +1,5 @@
 {
-  "settings": [
-    {
-      "id": "num",
-      "name": "Edge size",
-      "description": "Define edge size to view coastlines (in degrees of lon/lat)",
-      "defaultValue": 0,
-      "type": "DOUBLE"
-    }
-  ],
+  "settings": [],
   "dependencies": {
     "R": [
       {
