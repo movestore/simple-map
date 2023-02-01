@@ -9,7 +9,7 @@ shinyModuleUserInterface <- function(id, label) {
     titlePanel("Simple map"),
     sliderInput(inputId = ns("num"), 
                 label = "Choose edge size", 
-                value = 2, min = 0, max = 30),
+                value = 0, min = 0, max = 30),
     plotOutput(ns("map"),height="90vh")
   )
 }
