@@ -1,4 +1,4 @@
-# Simple Map
+# Static Map
 MoveApps
 
 Github repository: *github.com/movestore/simple-map*
@@ -19,10 +19,10 @@ Shiny user interface (UI)
 ### Artefacts
 none
 
-### Parameters 
+### Settings 
 `Choose edge size`: The amount of longitude and latitude units that shall be added at the edges of the data's bounding box for better visibility. Default 0.
 
 ### Null or error handling:
-**Parameter `Choose edge size`:** The default value is `0`, which leads to no extra margin of the map around the locations' bounding box.
+**Setting `Choose edge size`:** The default value is `0`, which leads to no extra margin of the map around the locations' bounding box.
 
 **Data:** The data are not manipulated, but empty input with no locations (NULL) leads to an error. For calculations in further Apps the input data set is returned.
