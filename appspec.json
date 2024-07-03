@@ -1,6 +1,5 @@
 {
   "version": "1.2",
-  {
   "settings": [],
   "dependencies": {
     "R": [
@@ -10,15 +9,15 @@
       {
         "name": "maps"
       },
-	        {
+	  {
         "name": "move2"
       },
 	  {
         "name": "sf"
       },
-	        {
+	  {
         "name": "shinycssloaders"
-      },
+      }
     ]
   },
   "license": {
