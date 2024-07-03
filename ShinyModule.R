@@ -22,6 +22,15 @@ shinyModule <- function(input, output, session, data) {
   dataObj <- reactive({ data })
   current <- reactiveVal(data)
   
+  #transform to lonlat
+  if (!st_is_longlat(data))
+  {
+    data_proj <- st_crs(data)
+    data <- data |> 
+      sf::st_transform(4326)
+    logger.info("Transformed data to LonLat for calcualtions.")
+  }
+  
   lon <- reactive({st_coordinates(data)[,1]})
   lat <- reactive({st_coordinates(data)[,2]})
   ids <- reactive({unique(mt_track_id(data))})
